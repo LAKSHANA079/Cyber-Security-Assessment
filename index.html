@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Assessment</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef3f9;
+      color: #172b4d;
+    }
+    header {
+      background: #10243e;
+      color: white;
+      padding: 25px 8%;
+    }
+    nav { margin-top: 18px; }
+    nav a {
+      color: white;
+      margin-right: 22px;
+      text-decoration: none;
+    }
+    .hero {
+      background: linear-gradient(120deg, #123456, #176b87);
+      color: white;
+      padding: 65px 8%;
+    }
+    .hero h1 { font-size: 38px; }
+    section { padding: 30px 8%; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #00000012;
+    }
+    .risk { font-weight: bold; color: #b45309; }
+    footer {
+      background: #10243e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>🛡 Cyber Security Assessment</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#findings">Findings</a>
+      <a href="#recommendations">Recommendations</a>
+    </nav>
+  </header>
 
+  <div class="hero" id="home">
+    <h1>Web Application Security Assessment</h1>
+    <p>A basic educational security assessment using OWASP Juice Shop.</p>
+  </div>
+
+  <section>
+    <h2>Project Overview</h2>
+    <div class="card">
+      <p><b>Internship:</b> YR NOVATECH – Task 2</p>
+      <p><b>Test Application:</b> OWASP Juice Shop</p>
+      <p><b>Purpose:</b> Identify potential security risks and understand defensive solutions.</p>
+    </div>
+  </section>
+
+  <section id="findings">
+    <h2>Security Findings</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>SQL Injection Risk</h3>
+        <p class="risk">Potential Risk: High</p>
+        <p>Displayed query construction appears to insert search criteria directly into SQL.</p>
+      </div>
+      <div class="card">
+        <h3>JWT Authentication</h3>
+        <p class="risk">Status: Not Confirmed</p>
+        <p>A JWT-related training challenge message was observed. Further verification is required.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="recommendations">
+    <h2>Security Recommendations</h2>
+    <div class="card">
+      <ul>
+        <li>Use parameterized SQL queries.</li>
+        <li>Validate and safely handle user input.</li>
+        <li>Verify JWT signatures on the server.</li>
+        <li>Apply secure authorization checks.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Cyber Security Internship | YR NOVATECH</p>
+    <p>Educational project – OWASP Juice Shop</p>
+  </footer>
+</body>
+</html>
